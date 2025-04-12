@@ -100,12 +100,12 @@
   document.getElementById("serviceForm").addEventListener("submit", function(e) {
     e.preventDefault();
     
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyg7oSZG98cc_Zp9_olUIErBplM2bGpskj4xUN_rzsk/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec";
     const form = e.target;
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        window.location.href = "https://kosmosblade.github.io/thankyou.html"; // Redirect to thank you page after submission
+        window.location.href = "https://kosmosblade.github.io/Legendtech.github.io/thankyou.html"; // Redirect to thank you page
       })
       .catch(error => alert('Error!', error.message));
   });
