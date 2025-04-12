@@ -72,9 +72,12 @@
 <div class="form-container">
   <h1>Request Service</h1>
   <form action="https://formsubmit.co/el/diwalu" method="POST">
-    <!-- Replace YOUR_EMAIL_HERE with your actual email address -->
+    <!-- Hidden settings -->
     <input type="hidden" name="_next" value="https://kosmosblade.github.io/thankyou.html">
-    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_subject" value="New Service Request from Legend's Tech">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_autoresponse" value="Thanks for contacting Legend's Tech! We'll be in touch shortly.">
 
     <label for="name">Name *</label>
     <input type="text" id="name" name="name" required>
