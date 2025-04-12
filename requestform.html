@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Request Service - Legend's Tech</title>
   <style>
     body {
@@ -103,13 +103,10 @@
     const scriptURL = "https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec";
     const form = e.target;
 
-    fetch(scriptURL, { 
-      method: 'POST', 
-      body: new FormData(form),
-      mode: 'cors'  // This tells the browser to include CORS headers in the request
-    })
-      .then(response => {
-        window.location.href = "https://kosmosblade.github.io/Legendtech.github.io/thankyou.html"; // Redirect to thank you page
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => response.text()) // Get the HTML response
+      .then(html => {
+        document.body.innerHTML = html; // Replace the page with the thank-you message
       })
       .catch(error => alert('Error!', error.message));
   });
