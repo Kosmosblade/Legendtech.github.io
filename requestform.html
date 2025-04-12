@@ -2,35 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Service Request - Legend's Tech</title>
+  <title>Legend's Tech - Request Form</title>
 </head>
 <body>
-
-  <h1>Request a Service</h1>
-
-  <form action="https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec" method="POST" target="_blank">
-    <label>Name:</label><br>
-    <input type="text" name="name" required><br><br>
-
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
-
-    <label>Address:</label><br>
-    <input type="text" name="address" required><br><br>
-
-    <label>Service:</label><br>
-    <select name="service" required>
-      <option value="">Choose a service</option>
-      <option value="PC Repair">PC Repair</option>
-      <option value="Phone Repair">Phone Repair</option>
-    </select><br><br>
-
-    <label>Message:</label><br>
-    <textarea name="message" required></textarea><br><br>
-
+  <h1>Service Request</h1>
+  <form action="https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec"
+        method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <label>Name: <input name="name" required></label><br>
+    <label>Email: <input name="email" required></label><br>
+    <label>Address: <input name="address"></label><br>
+    <label>Service: <input name="service"></label><br>
+    <label>Message: <textarea name="message"></textarea></label><br>
     <button type="submit">Submit</button>
   </form>
 
+  <!-- Hidden iframe to trick browser -->
+  <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) window.location.href='thankyou.html';"></iframe>
+
+  <script>
+    let submitted = false;
+  </script>
 </body>
 </html>
