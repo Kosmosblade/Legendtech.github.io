@@ -3,69 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Service Request Form - Legend's Tech</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #333;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #555;
-    }
-  </style>
+  <title>Service Request - Legend's Tech</title>
 </head>
 <body>
 
-  <h1>Legend's Tech Service Request</h1>
+  <h1>Request a Service</h1>
 
-  <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST" target="_blank">
-    <label for="name">Full Name:</label>
-    <input type="text" name="name" required>
+  <form action="https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec" method="POST" target="_blank">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
 
-    <label for="email">Email Address:</label>
-    <input type="email" name="email" required>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
 
-    <label for="address">Address:</label>
-    <input type="text" name="address" required>
+    <label>Address:</label><br>
+    <input type="text" name="address" required><br><br>
 
-    <label for="service">Service Requested:</label>
+    <label>Service:</label><br>
     <select name="service" required>
-      <option value="">--Select a Service--</option>
+      <option value="">Choose a service</option>
       <option value="PC Repair">PC Repair</option>
       <option value="Phone Repair">Phone Repair</option>
-      <option value="Network Setup">Network Setup</option>
-      <option value="Other">Other</option>
-    </select>
+    </select><br><br>
 
-    <label for="message">Message / Description:</label>
-    <textarea name="message" rows="5" required></textarea>
+    <label>Message:</label><br>
+    <textarea name="message" required></textarea><br><br>
 
-    <button type="submit">Submit Request</button>
+    <button type="submit">Submit</button>
   </form>
 
 </body>
