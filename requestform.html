@@ -103,7 +103,11 @@
     const scriptURL = "https://script.google.com/macros/s/AKfycbyDmxjjIbjSFd10eMUfXHhApV_6p1FeAvWM1HpNAF6a6iLFI6wCAMi3BaagNYViqHTi2g/exec";
     const form = e.target;
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form),
+      mode: 'cors'  // This tells the browser to include CORS headers in the request
+    })
       .then(response => {
         window.location.href = "https://kosmosblade.github.io/Legendtech.github.io/thankyou.html"; // Redirect to thank you page
       })
