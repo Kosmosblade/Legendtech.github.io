@@ -69,6 +69,10 @@
     button:hover {
       background-color: #34495e;
     }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -89,13 +93,31 @@
       <input type="text" name="address" required>
 
       <label>Service:</label>
-      <select name="service" required>
+      <select name="service" id="serviceSelect" required>
         <option value="">Choose a service</option>
         <option value="your Device">Mod Your Device</option>
         <option value="Pre Modded">Pre Modded Device</option>
         <option value="Device">Repair</option>
         <option value="Phone">Screen Repair</option>
       </select>
+
+      <div id="preModOptions" class="hidden">
+        <label>Device Color:</label>
+        <input type="text" name="color" placeholder="e.g. Black, Red, Custom skin...">
+
+        <label>Device Type:</label>
+        <select name="deviceType">
+          <option value="">Choose a device</option>
+          <option value="Nintendo Switch">Nintendo Switch</option>
+          <option value="Nintendo 3DS">Nintendo 3DS</option>
+          <option value="PSP">PSP</option>
+          <option value="PS Vita">PS Vita</option>
+          <option value="Game Boy Advance">Game Boy Advance</option>
+          <option value="Game Boy Color">Game Boy Color</option>
+          <option value="DS Lite">Nintendo DS Lite</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
 
       <label>Message:</label>
       <textarea name="message" required></textarea>
@@ -107,6 +129,15 @@
     <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) window.location.href='thankyou.html';"></iframe>
     <script>
       let submitted = false;
+
+      document.getElementById('serviceSelect').addEventListener('change', function () {
+        const preModOptions = document.getElementById('preModOptions');
+        if (this.value === 'Pre Modded') {
+          preModOptions.classList.remove('hidden');
+        } else {
+          preModOptions.classList.add('hidden');
+        }
+      });
     </script>
   </div>
 
