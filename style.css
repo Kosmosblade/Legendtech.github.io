@@ -1,0 +1,95 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Image banner styles */
+  .image-banner {
+    margin: 20px;
+    border: 5px solid #ccc;
+    background-color: #eee;
+  }
+  
+  .image-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Section styles */
+  section {
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #444;
+  }
+  
+  /* Services and price list styles */
+  .services, .price-list {
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .services li, .price-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Button styles */
+  .email-button, .facebook-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .facebook-button {
+    background-color: #3b5998; /* Facebook blue */
+  }
+  
+  .facebook-button:hover {
+    background-color: #4b70b0;
+  }
+  
+  /* Adjust image to be smaller and aligned to the left */
+  .service-image {
+    width: 24%; /* Reduced the image size to 24% */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .service-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .service-text {
+    flex: 1;
+    padding-left: 20px;
+  }
+  

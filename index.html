@@ -1,150 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Legend's Tech - Mods & Repairs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .image-banner {
-      margin: 20px;
-      border: 5px solid #ccc;
-      background-color: #eee;
-    }
-    .image-banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    section {
-      background-color: #eee;
-      padding: 20px;
-      margin: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }
-    h2 {
-      color: #444;
-    }
-    .services, .price-list {
-      max-width: 700px;
-      margin: auto;
-      text-align: left;
-    }
-    .services li, .price-list li {
-      margin-bottom: 10px;
-    }
-    .email-button, .facebook-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .facebook-button {
-      background-color: #3b5998; /* Facebook blue */
-    }
-    .facebook-button:hover {
-      background-color: #4b70b0;
-    }
-    .service-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .service-text {
-      flex: 1;
-      padding-left: 20px;
-    }
-    .service-image {
-      width: 24%; /* Reduced the image size to 24% */
-      height: auto;
-      display: block;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-<header>
-  <h1>Mods & Repairs Made Simple</h1>
-  <p>Hard Mods, Soft Mods, Repairs</p>
-</header>
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-<!-- Updated Image Source -->
-<div class="image-banner">
-  <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/Legends-stock-photo-4.png" alt="Legend's Tech Banner">
-</div>
+/* Image banner styles */
+.image-banner {
+  margin: 20px;
+  border: 5px solid #ccc;
+  background-color: #eee;
+}
 
-<section>
-  <h2>What I Offer</h2>
-  <div class="service-container">
-    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hombrew-stock.png" alt="Hombrew Stock Image" class="service-image">
-    <div class="service-text">
-      <ul class="services">
-        <li>🔹 <strong>Buy a Pre-Modded Unit:</strong> Choose hard mod or soft mod. Pay online. I ship the device to you.</li>
-        <li>🔹 <strong>Send in Your Own Unit:</strong> Mail or meet up locally. I mod your device and return it to you.</li>
-        <li>🔹 <strong>Repair Services:</strong> Screen replacements, battery fixes, hardware repairs, etc. Quick turnaround.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+.image-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-<section>
-  <h2>Available Services</h2>
-  <div class="service-container">
-    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hard-mod-stock-photo.png" alt="Hard Mod Stock Photo" class="service-image">
-    <div class="service-text">
-      <ul class="price-list">
-        <li>Hard Mod: $XX</li>
-        <li>Soft Mod: $XX</li>
-        <li>Basic Repair: Starting at $XX</li>
-        <li>Advanced Repair: Quote after inspection</li>
-        <li>Shipping Fee (if needed): depends on weight of unit</li>
-      </ul>
-    </div>
-  </div>
-</section>
+/* Section styles */
+section {
+  background-color: #eee;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
 
-<section>
-  <h2>How to Order</h2>
-  <p>Message me on Facebook, Email, or Text.</p>
-  <p>Tell me what you need (buy, mod, repair), confirm price, pay with PayPal/Cash App/Venmo — I get to work!</p>
-</section>
+h2 {
+  color: #444;
+}
 
-<section>
-  <h2>Contact</h2>
-  <p>📱 
-    <a href="https://www.facebook.com/profile.php?id=61575288623460" class="facebook-button" target="_blank">Message Me on Facebook</a></p>
-  <p>✉️ 
-    <a href="requestform.html" class="email-button">Email Us</a>
-  </p>
-  <p>📞 Phone: [Optional]</p>
-</section>
+/* Services and price list styles */
+.services, .price-list {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
 
-<script>
-  document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-  });
-</script>
+.services li, .price-list li {
+  margin-bottom: 10px;
+}
 
+/* Button styles */
+.email-button, .facebook-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-</body>
-</html>
+.facebook-button {
+  background-color: #3b5998; /* Facebook blue */
+}
+
+.facebook-button:hover {
+  background-color: #4b70b0;
+}
+
+/* Adjust image to be smaller and aligned to the left */
+.service-image {
+  width: 24%; /* Reduced the image size to 24% */
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-text {
+  flex: 1;
+  padding-left: 20px;
+}
