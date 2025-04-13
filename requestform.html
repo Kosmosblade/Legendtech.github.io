@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     .form-container {
@@ -73,6 +73,15 @@
     .hidden {
       display: none;
     }
+
+    .checkbox-group {
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      display: block;
+      font-weight: normal;
+    }
   </style>
 </head>
 <body>
@@ -93,79 +102,102 @@
       <input type="text" name="address" required>
 
       <label>Service:</label>
-      <select name="service" id="service" required>
+      <select name="service" id="serviceSelect" required>
         <option value="">Choose a service</option>
-        <option value="Mod Your Device">Mod Your Device</option>
-        <option value="Pre Modded Device">Pre Modded Device</option>
-        <option value="Repair">Repair</option>
-        <option value="Screen Repair">Screen Repair</option>
+        <option value="your Device">Mod Your Device</option>
+        <option value="Pre Modded">Pre Modded Device</option>
+        <option value="Device">Repair</option>
+        <option value="Phone">Screen Repair</option>
       </select>
 
-      <!-- Pre Modded Device Options -->
-      <div id="preModdedOptions" class="hidden">
+      <!-- Pre Modded Fields -->
+      <div id="preModOptions" class="hidden">
+        <label>Device Color:</label>
+        <input type="text" name="color" placeholder="e.g. Black, Red, Custom skin...">
+
         <label>Device Type:</label>
-        <select name="pre_device_type">
-          <option value="">Select device</option>
-          <option value="Nintendo 3DS">Nintendo 3DS</option>
+        <select name="deviceType">
+          <option value="">Choose a device</option>
           <option value="Nintendo Switch">Nintendo Switch</option>
+          <option value="Nintendo 3DS">Nintendo 3DS</option>
           <option value="PSP">PSP</option>
           <option value="PS Vita">PS Vita</option>
-          <option value="Other">Other</option>
-        </select>
-
-        <label>Color Preference:</label>
-        <select name="color">
-          <option value="">Select color</option>
-          <option value="Black">Black</option>
-          <option value="White">White</option>
-          <option value="Red">Red</option>
-          <option value="Blue">Blue</option>
+          <option value="Game Boy Advance">Game Boy Advance</option>
+          <option value="Game Boy Color">Game Boy Color</option>
+          <option value="DS Lite">Nintendo DS Lite</option>
           <option value="Other">Other</option>
         </select>
       </div>
 
       <!-- Mod Your Device Options -->
-      <div id="modYourDeviceOptions" class="hidden">
-        <label>Device Type:</label>
-        <select name="mod_device_type">
-          <option value="">Select device</option>
-          <option value="Nintendo 3DS">Nintendo 3DS</option>
-          <option value="Nintendo Switch">Nintendo Switch</option>
-          <option value="PSP">PSP</option>
-          <option value="PS Vita">PS Vita</option>
-          <option value="Other">Other</option>
-        </select>
-
+      <div id="modOptions" class="hidden">
         <label>Mod Type:</label>
-        <select name="mod_type" id="modType">
+        <select id="modTypeSelect" name="modType">
           <option value="">Select mod type</option>
           <option value="Softmod">Softmod</option>
           <option value="Hardmod">Hardmod</option>
         </select>
 
-        <!-- Softmod Options -->
-        <div id="softmodOptions" class="hidden">
-          <label>Softmod Options:</label>
-          <select name="softmod_option">
-            <option value="">Select softmod</option>
-            <option value="Luma3DS">Luma3DS</option>
-            <option value="GodMode9">GodMode9</option>
-            <option value="Rosalina Menu">Rosalina Menu</option>
-            <option value="Homebrew Launcher">Homebrew Launcher</option>
-            <option value="FBI Installer">FBI Installer</option>
-            <option value="Checkpoint">Checkpoint</option>
-            <option value="Other">Other</option>
-          </select>
+        <div id="softmodOptions" class="hidden checkbox-group">
+          <label><input type="checkbox" name="softmods" value="Luma3DS"> Luma3DS</label>
+          <label><input type="checkbox" name="softmods" value="GodMode9"> GodMode9</label>
+          <label><input type="checkbox" name="softmods" value="Homebrew Launcher"> Homebrew Launcher</label>
+          <label><input type="checkbox" name="softmods" value="FBI Installer"> FBI Installer</label>
+          <label><input type="checkbox" name="softmods" value="Checkpoint Save Manager"> Checkpoint Save Manager</label>
         </div>
 
-        <!-- Hardmod Options -->
-        <div id="hardmodOptions" class="hidden">
-          <label>Hardmod Options:</label>
-          <select name="hardmod_option">
-            <option value="">Select hardmod</option>
-            <option value="NAND Mod">NAND Mod</option>
-            <option value="Capture Card Installation">Capture Card Installation</option>
-            <option value="C-Stick Replacement">C-Stick Replacement</option>
-            <option value="Thumbstick
-::contentReference[oaicite:6]{index=6}
- 
+        <div id="hardmodOptions" class="hidden checkbox-group">
+          <label><input type="checkbox" name="hardmods" value="Capture Card"> Capture Card</label>
+          <label><input type="checkbox" name="hardmods" value="LED Mod"> LED Mod</label>
+          <label><input type="checkbox" name="hardmods" value="Shell Replacement"> Shell Replacement</label>
+          <label><input type="checkbox" name="hardmods" value="Custom Buttons"> Custom Buttons</label>
+          <label><input type="checkbox" name="hardmods" value="IPS Screen Install"> IPS Screen Install</label>
+        </div>
+      </div>
+
+      <label>Message:</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) window.location.href='thankyou.html';"></iframe>
+    <script>
+      let submitted = false;
+
+      const serviceSelect = document.getElementById('serviceSelect');
+      const preModOptions = document.getElementById('preModOptions');
+      const modOptions = document.getElementById('modOptions');
+      const modTypeSelect = document.getElementById('modTypeSelect');
+      const softmodOptions = document.getElementById('softmodOptions');
+      const hardmodOptions = document.getElementById('hardmodOptions');
+
+      serviceSelect.addEventListener('change', function () {
+        preModOptions.classList.add('hidden');
+        modOptions.classList.add('hidden');
+        softmodOptions.classList.add('hidden');
+        hardmodOptions.classList.add('hidden');
+        modTypeSelect.value = "";
+
+        if (this.value === 'Pre Modded') {
+          preModOptions.classList.remove('hidden');
+        } else if (this.value === 'your Device') {
+          modOptions.classList.remove('hidden');
+        }
+      });
+
+      modTypeSelect.addEventListener('change', function () {
+        softmodOptions.classList.add('hidden');
+        hardmodOptions.classList.add('hidden');
+
+        if (this.value === 'Softmod') {
+          softmodOptions.classList.remove('hidden');
+        } else if (this.value === 'Hardmod') {
+          hardmodOptions.classList.remove('hidden');
+        }
+      });
+    </script>
+  </div>
+
+</body>
+</html>
