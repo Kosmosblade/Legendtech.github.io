@@ -22,8 +22,14 @@
       margin: 20px auto;
       border: 5px solid #ccc;
       background-color: #eee;
-      max-width: 50%; /* Halved the banner size */
       border-radius: 10px;
+      width: 100%;
+      max-width: 800px;
+    }
+    @media (min-width: 768px) {
+      .image-banner {
+        max-width: 50%;
+      }
     }
     .image-banner img {
       display: block;
@@ -82,6 +88,20 @@
       display: block;
       border-radius: 5px;
       margin-right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .service-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .service-image {
+        width: 60%;
+        margin-bottom: 15px;
+      }
+      .service-text {
+        padding-left: 0;
+      }
     }
   </style>
 </head>
