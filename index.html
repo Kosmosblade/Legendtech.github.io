@@ -1,130 +1,144 @@
-<!-- Paste this version OVER your existing index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Legend's Tech - Mods & Repairs</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #f5f5f5;
       color: #333;
     }
+
     header {
-      background-color: #333;
+      background-color: #222;
       color: #fff;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+
     nav {
       background-color: #f0f0f0;
-      padding: 12px 0;
       text-align: center;
+      padding: 12px 0;
       border-bottom: 1px solid #ccc;
     }
+
     nav a {
-      margin: 0 15px;
-      font-weight: bold;
-      color: #333;
+      margin: 0 12px;
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
       font-size: 16px;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease;
     }
+
     nav a:hover {
       color: #0077cc;
     }
+
     .image-banner {
+      max-width: 1000px;
       margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
       border: 5px solid #ccc;
-      background-color: #eee;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 800px;
+      background-color: #eaeaea;
     }
-    @media (min-width: 768px) {
-      .image-banner {
-        max-width: 50%;
-      }
-    }
+
     .image-banner img {
-      display: block;
       width: 100%;
+      display: block;
       height: auto;
-      border-radius: 5px;
     }
+
     section {
-      background-color: #eee;
+      background: #fff;
+      margin: 20px auto;
       padding: 20px;
-      margin: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+
     h2 {
-      color: #444;
+      margin-top: 0;
+      color: #222;
     }
-    .services, .price-list {
-      max-width: 700px;
-      margin: auto;
-      text-align: left;
-    }
-    .services li, .price-list li {
-      margin-bottom: 10px;
-    }
-    .email-button, .facebook-button {
-      display: inline-block;
-      padding: 10px 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px 5px 0 0;
-    }
-    .facebook-button {
-      background-color: #3b5998;
-    }
-    .facebook-button:hover {
-      background-color: #4b70b0;
-    }
-    .email-button:hover {
-      background-color: #45a049;
-    }
+
     .service-container {
       display: flex;
-      align-items: flex-start;
-      justify-content: start;
+      gap: 20px;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
+
+    .service-image {
+      flex: 0 0 180px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 180px;
+    }
+
     .service-text {
       flex: 1;
-      padding-left: 20px;
-      min-width: 250px;
+      min-width: 200px;
     }
-    .service-image {
-      width: 18%;
-      min-width: 150px;
-      height: auto;
-      display: block;
-      border-radius: 5px;
-      margin-right: 20px;
+
+    .services, .price-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    @media (max-width: 600px) {
+
+    .services li, .price-list li {
+      margin: 10px 0;
+    }
+
+    a.email-button, a.facebook-button {
+      display: inline-block;
+      margin: 8px 10px 0 0;
+      padding: 10px 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    a.email-button {
+      background-color: #28a745;
+    }
+
+    a.email-button:hover {
+      background-color: #218838;
+    }
+
+    a.facebook-button {
+      background-color: #3b5998;
+    }
+
+    a.facebook-button:hover {
+      background-color: #4b70b0;
+    }
+
+    @media (max-width: 768px) {
       .service-container {
         flex-direction: column;
         align-items: center;
       }
+
       .service-image {
-        width: 60%;
-        margin-bottom: 15px;
+        max-width: 60%;
+        margin-bottom: 10px;
       }
+
       .service-text {
-        padding-left: 0;
+        text-align: center;
       }
     }
   </style>
@@ -151,12 +165,12 @@
 <section>
   <h2>What I Offer</h2>
   <div class="service-container">
-    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hombrew-stock.png" alt="Homebrew Service Image" class="service-image">
+    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hombrew-stock.png" alt="Homebrew Service" class="service-image">
     <div class="service-text">
       <ul class="services">
-        <li>🔹 <strong>Buy a Pre-Modded Unit:</strong> Choose hard mod or soft mod. Pay online. I ship the device to you.</li>
-        <li>🔹 <strong>Send in Your Own Unit:</strong> Mail or meet up locally. I mod your device and return it to you.</li>
-        <li>🔹 <strong>Repair Services:</strong> Screen replacements, battery fixes, hardware repairs, and more.</li>
+        <li>🔹 <strong>Pre-Modded Units:</strong> Choose hard or soft mod. Pay online, I ship it out.</li>
+        <li>🔹 <strong>Send Your Device:</strong> Mail or meet up. I mod, then return it.</li>
+        <li>🔹 <strong>Repair Services:</strong> Screen, battery, hardware & more.</li>
       </ul>
     </div>
   </div>
@@ -165,14 +179,14 @@
 <section>
   <h2>Available Services</h2>
   <div class="service-container">
-    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hard-mod-stock-photo.png" alt="Hard Mod Service Image" class="service-image">
+    <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/hard-mod-stock-photo.png" alt="Hard Modding" class="service-image">
     <div class="service-text">
       <ul class="price-list">
-        <li>Hard Modding: Depends on what you would like.</li>
-        <li>Soft Modding: Depends on what you would like.</li>
-        <li>Basic Repair: Battery, charger port, etc.</li>
-        <li>Advanced Repair: Quote after inspection.</li>
-        <li>Shipping Fee (if needed): Depends on unit weight.</li>
+        <li>🔧 Hard Modding — varies by device</li>
+        <li>💾 Soft Modding — varies by request</li>
+        <li>🔋 Basic Repair — battery, ports, etc.</li>
+        <li>🧰 Advanced Repair — quote after inspection</li>
+        <li>📦 Shipping — depends on weight</li>
       </ul>
     </div>
   </div>
@@ -180,20 +194,18 @@
 
 <section>
   <h2>How to Order</h2>
-  <p>📧 <a href="requestform.html" class="email-button">Send an Email</a></p>
-  <p>🛍️ <a href="store.html" class="email-button">Shop Now</a></p>
+  <a href="requestform.html" class="email-button">📧 Request a Service</a>
+  <a href="store.html" class="email-button">🛍️ Visit the Store</a>
 </section>
 
 <section>
-  <h2>Contact</h2>
-  <p>📱 <a href="https://www.facebook.com/profile.php?id=61575288623460" class="facebook-button" target="_blank">Message Me on Facebook</a></p>
-  <p>✉️ <a href="requestform.html" class="email-button">Email Us</a></p>
+  <h2>Contact Me</h2>
+  <a href="https://www.facebook.com/profile.php?id=61575288623460" class="facebook-button" target="_blank">📱 Message on Facebook</a>
+  <a href="requestform.html" class="email-button">✉️ Email Us</a>
 </section>
 
 <script>
-  document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-  });
+  document.addEventListener("contextmenu", e => e.preventDefault());
 </script>
 
 </body>
