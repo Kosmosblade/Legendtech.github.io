@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shipping Policy - Legend's Tech</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -23,45 +24,40 @@
     /* Navbar Styles */
     nav {
       background-color: #333;
-      overflow: hidden;
+      padding: 12px 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
     }
 
     nav a {
-      float: left;
-      display: block;
+      margin: 0 15px;
+      font-weight: bold;
       color: white;
-      text-align: center;
-      padding: 14px 20px;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 16px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #ddd;
-      color: black;
+      color: #0077cc;
     }
 
     .content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    h1 {
+    h1, h2 {
       color: #2c3e50;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      color: #444;
-      margin-top: 30px;
     }
 
     p {
+      color: #555;
+      font-size: 18px;
       line-height: 1.6;
       margin-bottom: 20px;
     }
@@ -71,11 +67,26 @@
       margin: 0 auto 30px;
       max-width: 140px;
     }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        margin: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar (Header) for all pages -->
   <nav>
     <a href="index.html">🏠 Home</a>
     <a href="store.html">🛒 Store</a>
@@ -89,28 +100,28 @@
     <h1>Legend's Tech - Shipping Policy</h1>
   </header>
 
-  <div class="content">
+  <section class="content">
     <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/tech-guy.png" alt="Tech Guy Clipboard" class="tech-guy">
 
     <h1>Shipping Policy</h1>
 
-    <p>At Legend’s Tech, we’re dedicated to getting your order to you as quickly and safely as possible. Please review our shipping policies below for full details.</p>
+    <p>At Legend’s Tech, we’re committed to delivering your orders safely and promptly. Please read our shipping policies below:</p>
 
     <h2>Processing Time</h2>
-    <p>All orders are processed within 1-3 business days. If we are experiencing a high volume of orders, shipments may be delayed by a few days. You will receive a notification if your shipment is delayed beyond our standard window.</p>
+    <p>Orders are processed within 1-3 business days. Delays may occur during high volume periods, and you will be notified if a shipment is delayed beyond the standard processing time.</p>
 
     <h2>Shipping Rates & Delivery Estimates</h2>
-    <p>Shipping charges for your order will be calculated and displayed at checkout. We offer various shipping methods depending on your location and preference. Estimated delivery time is typically 3-7 business days within the U.S.</p>
+    <p>Shipping rates will be displayed during checkout, based on your location and shipping preference. Typical delivery time is 3-7 business days within the U.S.</p>
 
     <h2>Shipment Confirmation & Order Tracking</h2>
-    <p>You will receive a shipment confirmation email once your order has shipped containing your tracking number(s). The tracking number will be active within 24 hours.</p>
+    <p>A shipment confirmation email with tracking information will be sent once your order ships. The tracking link will be active within 24 hours.</p>
 
     <h2>Damages</h2>
-    <p>Legend’s Tech is not liable for any products damaged or lost during shipping. If your order arrives damaged, please contact the shipment carrier to file a claim. Be sure to save all packaging materials and damaged goods before filing.</p>
+    <p>We are not liable for damages or losses that occur during shipping. If your order arrives damaged, please contact the carrier to file a claim. Retain all packaging and damaged items for the claim process.</p>
 
-    <h2>International Shipping Policy</h2>
-    <p>We currently do not ship outside the U.S. If international shipping becomes available, we’ll update this section with new information.</p>
-  </div>
+    <h2>International Shipping</h2>
+    <p>Currently, we do not offer international shipping. Updates will be made if this changes in the future.</p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Legend's Tech. All rights reserved.</p>
