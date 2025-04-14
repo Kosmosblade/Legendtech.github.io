@@ -14,21 +14,24 @@
       color: #333;
     }
 
+    /* Header Styles */
     header {
-      background-color: #333;
-      color: white;
+      background-color: #2c3e50;
+      color: #fff;
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
+      font-size: 1.8rem;
     }
 
+    /* Ensuring header h1 is white */
     header h1 {
-      color: white;
       margin: 0;
+      color: white; /* Explicitly set the color of the h1 to white */
     }
 
-    /* Navbar Styles */
+    /* Top Navbar Styles */
     nav {
-      background-color: #333;
+      background-color: #34495e;
       padding: 12px 0;
       text-align: center;
       border-bottom: 1px solid #ccc;
@@ -47,6 +50,7 @@
       color: #0077cc;
     }
 
+    /* Main Content */
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -62,6 +66,8 @@
 
     .content h1 {
       color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
 
     p {
@@ -71,23 +77,43 @@
       margin-bottom: 20px;
     }
 
+    /* Tech Guy Image Styling */
     .tech-guy {
       display: block;
       margin: 0 auto 30px;
       max-width: 140px;
     }
 
+    /* Footer Styles */
     footer {
-      background-color: #333;
+      background-color: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 15px 0;
       text-align: center;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #0077cc;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+
       .content {
         margin: 20px;
       }
+
       p {
         font-size: 16px;
       }
@@ -96,19 +122,19 @@
 </head>
 <body>
 
+  <!-- Header Section -->
   <header>
     <h1>Legend's Tech - Shipping Policy</h1>
   </header>
 
+  <!-- Navbar Section -->
   <nav>
     <a href="index.html">🏠 Home</a>
     <a href="store.html">🛒 Store</a>
     <a href="requestform.html">📝 Request Form</a>
-    <a href="shippingpolicy.html">📦 Shipping Policy</a>
-    <a href="Terms-Of-Service.html">📃 Terms of Service</a>
-    <a href="privacypolicy.html">🔐 Privacy Policy</a>
   </nav>
 
+  <!-- Main Content Section -->
   <section class="content">
     <img src="https://kosmosblade.github.io/Legendtech.github.io/assets/tech-guy.png" alt="Tech Guy Clipboard" class="tech-guy">
 
@@ -134,8 +160,13 @@
     <a href="mailto:kosmoblade@gmail.com" class="email-button">Email Us</a>
   </section>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Legend's Tech. All rights reserved.</p>
+    <p>&copy; 2025 Legend's Tech | 
+       <a href="shippingpolicy.html">Shipping Policy</a> | 
+       <a href="terms-of-service.html">Terms of Service</a> | 
+       <a href="privacypolicy.html">Privacy Policy</a>
+    </p>
   </footer>
 
 </body>
