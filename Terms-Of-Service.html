@@ -38,7 +38,7 @@
     }
 
     nav a:hover {
-      color: white; /* Fix: Keep hover color white */
+      color: white;
     }
 
     .content {
@@ -68,6 +68,30 @@
       text-align: center;
     }
 
+    .tech-guy {
+      display: block;
+      max-width: 150px;
+      margin: 20px auto;
+    }
+
+    .email-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .email-button:hover {
+      background-color: #555;
+    }
+
     @media (max-width: 600px) {
       .content {
         margin: 20px;
@@ -94,6 +118,7 @@
   </nav>
 
   <section class="content">
+    <img src="tech-guy.png" alt="Tech Guy" class="tech-guy">
     <h2>Terms of Service</h2>
     <p>Welcome to Legend's Tech! By using our website and services, you agree to the following terms and conditions.</p>
 
@@ -120,6 +145,7 @@
 
     <h2>8. Contact Us</h2>
     <p>If you have any questions or concerns regarding these Terms of Service, please contact us at <strong>support@legendstech.com</strong>.</p>
+    <a href="mailto:kosmoblade@gmail.com" class="email-button">Email Us</a>
   </section>
 
   <footer>
