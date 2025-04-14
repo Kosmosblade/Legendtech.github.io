@@ -15,14 +15,19 @@
     }
 
     header {
-      background-color: #333;
+      background-color: #2c3e50; /* Blue-ish Gray Banner */
       color: #fff;
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
+      font-size: 2rem;
+    }
+
+    header h1 {
+      margin: 0;
     }
 
     nav {
-      background-color: #333;
+      background-color: #34495e;
       padding: 12px 0;
       text-align: center;
       border-bottom: 1px solid #ccc;
@@ -34,23 +39,35 @@
       color: white;
       text-decoration: none;
       font-size: 16px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ccc;
+      color: #0077cc;
+    }
+
+    .content-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .content-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-size: 2.5rem;
     }
 
     .content {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
       background-color: #fff;
+      padding: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .content h2 {
-      color: #333;
+      color: #2c3e50;
     }
 
     p {
@@ -61,20 +78,26 @@
     }
 
     footer {
-      background-color: #333;
+      background-color: #2c3e50;
       color: white;
-      padding: 20px;
+      padding: 15px 0;
       text-align: center;
+      font-size: 14px;
     }
 
-    .tech-guy {
-      display: block;
-      max-width: 150px;
-      margin: 20px auto;
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #0077cc;
     }
 
     .email-button {
-      background-color: #333;
+      background-color: #34495e;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -88,12 +111,13 @@
     }
 
     .email-button:hover {
-      background-color: #555;
+      background-color: #0077cc;
     }
 
-    @media (max-width: 600px) {
-      .content {
-        margin: 20px;
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .content-container h1 {
+        font-size: 2rem;
       }
 
       p {
@@ -112,47 +136,49 @@
     <a href="index.html">🏠 Home</a>
     <a href="store.html">🛒 Store</a>
     <a href="requestform.html">📝 Request Form</a>
-    <a href="shippingpolicy.html">📦 Shipping Policy</a>
-    <a href="Terms-Of-Service.html">📃 Terms of Service</a>
-    <a href="privacypolicy.html">🔐 Privacy Policy</a>
   </nav>
 
-  <section class="content">
-    <img src="assets/tech-guy.png" alt="Tech Guy" class="tech-guy">
-    <h2>Terms of Service</h2>
-    <p>By requesting or using services from Legend's Tech, you agree to the following terms and conditions. These terms ensure transparency and protect both you and our business.</p>
+  <div class="content-container">
+    <h1>Terms of Service</h1>
+    <div class="content">
+      <p>By requesting or using services from Legend's Tech, you agree to the following terms and conditions. These terms ensure transparency and protect both you and our business.</p>
 
-    <h2>1. Services Provided</h2>
-    <p>Legend's Tech specializes in repairing PCs, game consoles, and performing modification services on supported devices. All services are performed to the best of our ability and according to the customer's request.</p>
+      <h2>1. Services Provided</h2>
+      <p>Legend's Tech specializes in repairing PCs, game consoles, and performing modification services on supported devices. All services are performed to the best of our ability and according to the customer's request.</p>
 
-    <h2>2. Payments</h2>
-    <p>Payment must be made in full before completed services or modified devices are returned to the customer. All pricing is listed clearly on our site or provided upon request.</p>
+      <h2>2. Payments</h2>
+      <p>Payment must be made in full before completed services or modified devices are returned to the customer. All pricing is listed clearly on our site or provided upon request.</p>
 
-    <h2>3. Turnaround Time</h2>
-    <p>Repair and modding turnaround times vary depending on the job complexity and parts availability. We aim to communicate timelines clearly and keep you updated on any delays.</p>
+      <h2>3. Turnaround Time</h2>
+      <p>Repair and modding turnaround times vary depending on the job complexity and parts availability. We aim to communicate timelines clearly and keep you updated on any delays.</p>
 
-    <h2>4. Warranty and Liability</h2>
-    <p>While we take great care with every repair and mod, Legend's Tech is not responsible for any damage caused by user error, improper use, or third-party interference after the item has been returned.</p>
+      <h2>4. Warranty and Liability</h2>
+      <p>While we take great care with every repair and mod, Legend's Tech is not responsible for any damage caused by user error, improper use, or third-party interference after the item has been returned.</p>
 
-    <h2>5. Refunds</h2>
-    <p>Due to the custom nature of our work, refunds are only offered under specific circumstances, such as if we are unable to complete a service as promised.</p>
+      <h2>5. Refunds</h2>
+      <p>Due to the custom nature of our work, refunds are only offered under specific circumstances, such as if we are unable to complete a service as promised.</p>
 
-    <h2>6. Customer Property</h2>
-    <p>It is the customer’s responsibility to back up any personal data before sending in a device. We are not liable for any data loss during repair or modding services.</p>
+      <h2>6. Customer Property</h2>
+      <p>It is the customer’s responsibility to back up any personal data before sending in a device. We are not liable for any data loss during repair or modding services.</p>
 
-    <h2>7. Service Refusal</h2>
-    <p>We reserve the right to refuse service for any reason, including but not limited to inappropriate behavior, unsafe hardware conditions, or modification requests that violate our policies.</p>
+      <h2>7. Service Refusal</h2>
+      <p>We reserve the right to refuse service for any reason, including but not limited to inappropriate behavior, unsafe hardware conditions, or modification requests that violate our policies.</p>
 
-    <h2>8. Updates to Terms</h2>
-    <p>Legend's Tech may update these terms at any time. We encourage customers to review this page before requesting services to stay informed.</p>
+      <h2>8. Updates to Terms</h2>
+      <p>Legend's Tech may update these terms at any time. We encourage customers to review this page before requesting services to stay informed.</p>
 
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out to us any time and we’ll be happy to assist.</p>
-    <a href="mailto:kosmoblade@gmail.com" class="email-button">Email Us</a>
-  </section>
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach out to us any time and we’ll be happy to assist.</p>
+      <a href="mailto:kosmoblade@gmail.com" class="email-button">Email Us</a>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 Legend's Tech. All rights reserved.</p>
+    <p>&copy; 2025 Legend's Tech | 
+       <a href="shippingpolicy.html">Shipping Policy</a> | 
+       <a href="terms-of-service.html">Terms of Service</a> | 
+       <a href="privacypolicy.html">Privacy Policy</a>
+    </p>
   </footer>
 
 </body>
